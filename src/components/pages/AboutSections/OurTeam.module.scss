@@ -6,6 +6,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @media (max-width: 375px) {
+      align-items: center;
+      justify-content: center;
+    }
     .team {
       width: 100%;
       display: grid;
@@ -13,9 +17,16 @@
       align-content: center;
       align-items: center;
       justify-content: space-between;
-      gap: 78px;
+      gap: 10%;
       margin-top: 50px;
+      @media (max-width: 375px) {
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
       .person {
+        width: 315px;
         height: 450px;
         display: flex;
         flex-direction: column;

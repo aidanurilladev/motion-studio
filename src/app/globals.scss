@@ -30,14 +30,14 @@ body {
 
 .title {
 	font-family: "Gilroy";
-	font-size: 92px;
+	font-size: clamp(28px, 5vw, 92px);
 	color: #212121;
 	font-weight: 500;
 }
 
 .container {
-	width: 100%;
 	max-width: 1440px;
-	margin-inline: auto;
-	padding: 20px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
 }
