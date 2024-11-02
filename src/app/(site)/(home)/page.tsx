@@ -1,6 +1,8 @@
+import Home from "@/components/pages/Home";
+
 const page = () => {
   return <div>
-    welcome
+    <Home/>
   </div>;
 };
 
