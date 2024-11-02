@@ -1,10 +1,12 @@
-import ReduxProvider from '@/providers/ReduxProvider'
-import React from 'react'
+"use client";
+import { ReduxProvider } from "@/providers/ReduxProvider";
+import React, { FC, ReactNode } from "react";
 
-const layoutClient = () => {
-  return (
-    <div>layoutClient</div>
-  )
+interface LayoutProps {
+  children: ReactNode;
 }
+const LayoutClient: FC<LayoutProps> = ({ children }) => {
+  return <ReduxProvider>{children}</ReduxProvider>;
+};
 
-export default layoutClient
+export default LayoutClient;

@@ -1,9 +1,15 @@
-import React from 'react'
+import { store } from '@/redux/store';
+import { FC, ReactNode } from 'react';
+import { Provider } from 'react-redux';
 
-const ReduxProvider = () => {
-  return (
-    <div>ReduxProvider</div>
-  )
+interface ReduxProviderType {
+	children: ReactNode;
 }
 
-export default ReduxProvider
+export const ReduxProvider: FC<ReduxProviderType> = ({ children }) => {
+	return (
+		<>
+			<Provider store={store}>{children}</Provider>
+		</>
+	);
+};
