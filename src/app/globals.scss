@@ -1,3 +1,14 @@
+@font-face {
+	font-family: "Gilroy";
+	src: url('./fonts/Gilroy-Light.woff');
+	font-weight: 500;
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url('./fonts/Montserrat-VariableFont_wght.ttf');
+}
+
+
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -13,11 +24,20 @@ a {
 	text-decoration: none;
 }
 
+body {
+	font-family: 'Montserrat', sans-serif;
+}
 
+.title {
+	font-family: "Gilroy";
+	font-size: 92px;
+	color: #212121;
+	font-weight: 500;
+}
 
 .container {
 	width: 100%;
 	max-width: 1440px;
 	margin-inline: auto;
-	padding-inline: 20px;
+	padding: 20px;
 }

@@ -1,0 +1,45 @@
+.OurTeam {
+  margin-top: 150px;
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .team {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 23% 23% 23%;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      gap: 78px;
+      margin-top: 50px;
+      .person {
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        border-radius: 8px;
+        box-shadow: 0 5px 8px 0 #0000001A;
+        transition: .4s;
+        &:hover {
+          transform: scale(110%);
+        }
+        h2 {
+          margin-top: 28px;
+          font-family: 'Gilroy';
+          font-size: 20px;
+          font-weight: 500;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 500;
+          color: #7B6AFF80;
+        }
+      }
+    }
+  }
+}

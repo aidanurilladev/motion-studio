@@ -1,5 +1,45 @@
 .AboutSections {
+  margin-top: 90px;
   .content {
-    
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .img {
+      margin-top: 100px;
+      width: 493px;
+      height: 496px;
+      background-color: transparent;
+      border: 3px solid #000;
+      .aboutSvg {
+        width: 100%;
+        height: 100%;
+        transition: .4s;
+        &:hover {
+          transform: scale(120%) translateX(90px) translateY(-60px)
+        }
+      }
+    }
+    .aboutUs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      h3 {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 700;
+        color: #6483F6;
+        padding-left: 8px;
+      }
+      p {
+        font-size: 22px;
+        font-weight: 400;
+        color: #333333;
+
+        &:nth-child(2) {
+          color: #333333a4;
+        }
+      }
+    }
   }
 }
