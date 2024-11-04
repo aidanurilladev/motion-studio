@@ -1,39 +1,43 @@
 import Image from "next/image";
 import scss from "./StudySections.module.scss";
-import Study from "@/assets/img/Study.svg";
+
+import imgAbroad from "@/assets/img/Bitmap.svg";
+import Link from "next/link";
 
 const StudySections = () => {
   return (
     <section className={scss.StudySections}>
       <div className="container">
+        <h2>Study Abroad</h2>
         <div className={scss.content}>
-          <h1 className={scss.title}>Study Abroad</h1>
-          <div className={scss.motion}>
-            <div className={scss.img}>
-              <Image className={scss.Study} src={Study} alt="Study" />
-            </div>
-            <div className={scss.Abroad}>
-              <p>
-                <strong> Motion study</strong> for International Education offers its clients
-                various study abroad opportunities – language courses,
-                secondary, professional and higher education, professional
-                development programmes for teachers and specialists of companies
-                and organizations.
-              </p>
-              <p>
-                <strong>Our partners include:</strong><br />
-                -	Universities and higher education establishments.<br />
-                -	Private schools and colleges.<br />
-                -	State schools and colleges.<br />
-                -	World known language schools for adults.<br />
-                -	International language schools for 7-18 y.o. schoolchildren.<br />
-                -	Business schools<br />
-                -	Executive centres<br />
-                -	Summer camps<br />
-                -	Guardianship companies
-              </p>
+          <div className={scss.img}>
+            <Image className={scss.imgAbroad} src={imgAbroad} alt="abroad" />
+          </div>
+          <div className={scss.AbroadUs}>
+            <p>
+              <span>Motion study</span> for International Education offers its
+              clients various study abroad opportunities – language courses,
+              secondary, professional and higher education, professional
+              development programmes for teachers and specialists of companies
+              and organizations.
+            </p>
+            <ol>
+              Our partners include:
+              <li>- Universities and higher education establishments.</li>
+              <li>- Private schools and colleges.</li>
+              <li>- State schools and colleges.</li>
+              <li>- World known language schools for adults.</li>
+              <li>
+                - International language schools for 7-18 y.o. schoolchildren.
+              </li>
+              <li>- Business schools.</li>
+              <li>- Executive centres</li>
+              <li>- Summer camps</li>
+              <li>- Guardianship companies</li>
+            </ol>
+            <Link href="/contries">
               <button>Explore</button>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

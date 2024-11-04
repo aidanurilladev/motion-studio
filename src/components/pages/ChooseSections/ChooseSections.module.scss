@@ -1,5 +1,63 @@
 .ChooseSections {
+  padding: 90px 0;
   .content {
-    
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 50px;
+    h1 {
+      font-family: Gilroy;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 58.22px;
+    }
+
+    .filters {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+
+      select {
+        width: max-content;
+        height: 24px;
+        border: none;
+        outline: none;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24.38px;
+
+        option {
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24.38px;
+        }
+      }
+    }
+
+    .cards {
+      width: 235px;
+      height: 295px;
+      border-radius: 14px;
+      box-shadow: 4.82px 7.71px 24.11px 0px #0000001a;
+      padding: 25px 30px;
+      .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        h3 {
+          font-family: Montserrat;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 29.26px;
+          text-align: left;
+        }
+      }
+    }
   }
 }
