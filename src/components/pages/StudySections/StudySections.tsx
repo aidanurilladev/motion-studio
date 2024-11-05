@@ -1,6 +1,7 @@
 import Image from "next/image";
 import scss from "./StudySections.module.scss";
 import imgAbroad from "@/assets/img/Bitmap.svg";
+import Link from "next/link";
 
 const StudySections = () => {
   return (
@@ -33,7 +34,9 @@ const StudySections = () => {
               <li>- Summer camps</li>
               <li>- Guardianship companies</li>
             </ol>
-            <button>Explore</button>
+            <Link href="/contries">
+              <button>Explore</button>
+            </Link>
           </div>
         </div>
       </div>

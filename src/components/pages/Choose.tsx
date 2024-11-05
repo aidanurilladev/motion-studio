@@ -1,12 +1,11 @@
-import ChooseSection from "./ChooseSections/ChooseSections"
-
+import ChooseSection from "./ChooseSections/ChooseSections";
 
 const Choose = () => {
   return (
-    <div>
-      <ChooseSection/>
-    </div>
-  )
-}
+    <>
+      <ChooseSection />
+    </>
+  );
+};
 
-export default Choose
+export default Choose;
