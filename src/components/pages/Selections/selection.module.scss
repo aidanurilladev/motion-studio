@@ -5,16 +5,17 @@
   gap: 40px;
 
   select {
-    width: 200px;
-    height: 24px;
-    border: none;
+    border: 1px solid rgba(128, 128, 128, 0.093);
+    padding: 8px;
+    border-radius: 10px;
+
     outline: none;
     font-family: Montserrat;
     font-size: 20px;
     font-weight: 500;
 
     option {
-      width: max-content;
+      width: 100px;
       font-family: Montserrat;
       font-size: 14px;
       font-weight: 500;
