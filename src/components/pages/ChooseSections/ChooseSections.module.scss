@@ -13,49 +13,74 @@
       line-height: 58.22px;
     }
 
-    .filters {
+    .cards {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 40px;
-
-      select {
-        width: max-content;
-        height: 24px;
-        border: none;
-        outline: none;
-        font-family: Montserrat;
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 24.38px;
-
-        option {
-          font-family: Montserrat;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 24.38px;
-        }
-      }
-    }
-
-    .cards {
-      width: 235px;
-      height: 295px;
-      border-radius: 14px;
-      box-shadow: 4.82px 7.71px 24.11px 0px #0000001a;
-      padding: 25px 30px;
+      justify-content: start;
+      flex-wrap: wrap;
+      gap: 80px;
       .card {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
         gap: 20px;
-        h3 {
+        width: 250px;
+        height: 300px;
+        border-radius: 14px;
+        box-shadow: 4.82px 7.71px 24.11px 0px #0000001a;
+        padding: 25px 30px;
+        cursor: pointer;
+        h4 {
           font-family: Montserrat;
           font-size: 24px;
           font-weight: 400;
           line-height: 29.26px;
           text-align: left;
+        }
+        h3 {
+          display: none;
+          font-family: Montserrat;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .ChooseSections {
+    padding: 60px 0;
+    .content {
+      gap: 30px;
+      h1 {
+        font-size: 28px;
+        font-weight: 800;
+        color: black;
+      }
+      .cards {
+        width: 100%;
+        gap: 25px;
+        .card {
+          width: 335px;
+          height: 80px;
+          padding: 15px 18px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: start;
+
+          img {
+            width: 48px;
+            height: 48px;
+          }
+          h4 {
+            display: none;
+          }
+          h3 {
+            display: flex;
+          }
         }
       }
     }

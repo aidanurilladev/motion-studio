@@ -1,0 +1,36 @@
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  select {
+    border: 1px solid rgba(128, 128, 128, 0.093);
+    padding: 8px;
+    border-radius: 10px;
+
+    outline: none;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+
+    option {
+      width: 100px;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24.38px;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .filters {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 14px;
+    select {
+      width: 100%;
+    }
+  }
+}

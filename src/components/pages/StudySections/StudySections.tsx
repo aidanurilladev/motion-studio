@@ -35,7 +35,7 @@ const StudySections = () => {
               <li>- Summer camps</li>
               <li>- Guardianship companies</li>
             </ol>
-            <Link href="/contries">
+            <Link href="/study/contries">
               <button>Explore</button>
             </Link>
           </div>
