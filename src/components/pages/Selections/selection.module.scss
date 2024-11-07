@@ -23,3 +23,14 @@
     }
   }
 }
+
+@media (max-width: 370px) {
+  .filters {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 14px;
+    select {
+      width: 100%;
+    }
+  }
+}
