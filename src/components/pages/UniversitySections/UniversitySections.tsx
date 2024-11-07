@@ -10,7 +10,9 @@ const UniversitySections = () => {
           <h1>Solbrige University</h1>
 
           <div className={scss.firstBlock}>
-            <Image src={univer} alt="photo" width={550} height={550} />
+            <div className={scss.photoContent}>
+              <Image src={univer} alt="photo" width={550} height={550} />
+            </div>
 
             <div className={scss.infoUniversity}>
               <div className={scss.info}>
@@ -42,6 +44,17 @@ const UniversitySections = () => {
                 <span>Language:</span>
                 <h4>english,Italian</h4>
               </div>
+            </div>
+          </div>
+          <div className={scss.secondBlock}>
+            <div className={scss.box}>
+              <p>Description</p>
+            </div>
+            <div className={scss.box}>
+              <p>Cost</p>
+            </div>
+            <div className={scss.box}>
+              <p>Photo</p>
             </div>
           </div>
         </div>
