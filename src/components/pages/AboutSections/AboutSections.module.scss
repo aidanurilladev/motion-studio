@@ -5,7 +5,6 @@
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: flex-start;
-    gap: 64px;
     @media (max-width: 375px) {
       display: flex;
       flex-direction: column-reverse;
