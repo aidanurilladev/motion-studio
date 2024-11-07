@@ -6,15 +6,15 @@ import Vector from '../../../assets/img/Vector.svg';
 const Header: FC = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
+      <div className="container">
         <div className={styles.headerBlock}>
           <div className={styles.headerImg}>
             <Image src={Vector} alt="Logo" width={50} height={50} />
           </div>
           <div className={styles.headerLinks}>
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">Study Abroad</a>
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/study">Study Abroad</a>
             <a href="#">Contacts</a>
           </div>
           <div className={styles.headerInput}>
