@@ -1,7 +1,6 @@
 import React from "react";
 import scss from "./DescriptionSections.module.scss";
 import Image from "next/image";
-import logo from "@/assets/img/image 101.svg";
 import icon1 from "@/assets/img/image 102.svg";
 
 const DescriptionSections = () => {
@@ -34,10 +33,9 @@ const DescriptionSections = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.leftBlock}>
-            {data.map((el) => (
-              <div className={scss.table}>
+            {data.map((el, idx) => (
+              <div key={idx} className={scss.table}>
                 <div className={scss.box1}>
-                  {/* <Image src={logo} alt="logo" /> */}
                   <h3>{el.title}</h3>
                 </div>
                 <div className={scss.box2}>
@@ -48,7 +46,9 @@ const DescriptionSections = () => {
             ))}
           </div>
           <div className={scss.rightBlock}>
-            <button>Apply Now!!! Fall semester 2023</button>
+            <button>
+              <span>Apply Now!!! </span>Fall semester 2023
+            </button>
             <div className={scss.box}>
               <Image src={icon1} alt="icon" />
               <p>

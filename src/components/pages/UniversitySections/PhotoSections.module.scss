@@ -1,0 +1,13 @@
+.PhotoSections {
+  .content {
+    .block {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+      flex-wrap: wrap;
+      .img {
+        margin: 30px;
+      }
+    }
+  }
+}
