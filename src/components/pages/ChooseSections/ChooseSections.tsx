@@ -30,7 +30,7 @@ const ChooseSections = () => {
           <div className={scss.cards}>
             {countries.map((country) => (
               <div key={country.id} className={scss.card}>
-                <Image src={america} alt="america " />
+                <Image src={america} alt="america " width={172} height={172} />
                 <h4>{country.name}</h4>
                 <h3>Higher education in the UK</h3>
               </div>

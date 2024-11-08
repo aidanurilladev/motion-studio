@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import scss from "./selection.module.scss";
 
 const Selection = () => {
