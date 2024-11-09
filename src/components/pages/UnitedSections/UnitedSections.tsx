@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import Selection from "../Selections/Selection";
 import scss from "./UnitedSections.module.scss";
 import SolbrigeUniversity from "@/assets/img/SolbrigeUniversity.png";
 import { IoLocationOutline } from "react-icons/io5";
+import Link from "next/link";
 
 const UnitedSections = () => {
   const universities = [
@@ -67,12 +69,14 @@ const UnitedSections = () => {
           <div className={scss.universities}>
             {universities.map((university) => (
               <div key={university.id} className={scss.card}>
-                <Image
-                  src={SolbrigeUniversity}
-                  alt="university"
-                  width={230}
-                  height={160}
-                />
+                <Link href="/study/contries/universities/universityById">
+                  <Image
+                    src={SolbrigeUniversity}
+                    alt="university"
+                    width={230}
+                    height={160}
+                  />
+                </Link>
                 <div className={scss.info}>
                   <div className={scss.name}>
                     <h6>Name:</h6>
