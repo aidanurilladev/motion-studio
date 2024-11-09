@@ -11,3 +11,18 @@
     }
   }
 }
+
+@media (max-width: 375px) {
+  .PhotoSections {
+    .content {
+      .block {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        .img {
+        }
+      }
+    }
+  }
+}
