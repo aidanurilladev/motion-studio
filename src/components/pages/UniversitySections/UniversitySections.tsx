@@ -7,7 +7,6 @@ import DescriptionSections from "@/components/pages/UniversitySections/Descripti
 import CostSections from "./CostSections";
 import PhotoSections from "./PhotoSections";
 
-
 const UniversitySections = () => {
   const [activeSection, setActiveSection] = useState<string>("Description");
 
@@ -22,9 +21,7 @@ const UniversitySections = () => {
           <h1>Solbrige University</h1>
 
           <div className={scss.firstBlock}>
-            <div className={scss.photoContent}>
-              <Image src={univer} alt="photo" width={550} height={550} />
-            </div>
+            <Image src={univer} alt="photo" width={550} height={550} />
 
             <div className={scss.infoUniversity}>
               <div className={scss.info}>
@@ -36,7 +33,7 @@ const UniversitySections = () => {
                 <h4>1996</h4>
               </div>
               <div className={scss.information}>
-                <span>Type of programs:</span>
+                <span className={scss.type}>Type of programs:</span>
                 <div className={scss.infoBack}>
                   <h4>Bachelor Course Magistracy</h4>
                 </div>
@@ -61,19 +58,25 @@ const UniversitySections = () => {
 
           <div className={scss.secondBlock}>
             <div
-              className={`${scss.box} ${activeSection === "Description" ? scss.active : ""}`}
+              className={`${scss.box} ${
+                activeSection === "Description" ? scss.active : ""
+              }`}
               onClick={() => handleBoxClick("Description")}
             >
               <p>Description</p>
             </div>
             <div
-              className={`${scss.box} ${activeSection === "Cost" ? scss.active : ""}`}
+              className={`${scss.box} ${
+                activeSection === "Cost" ? scss.active : ""
+              }`}
               onClick={() => handleBoxClick("Cost")}
             >
               <p>Cost</p>
             </div>
             <div
-              className={`${scss.box} ${activeSection === "Photo" ? scss.active : ""}`}
+              className={`${scss.box} ${
+                activeSection === "Photo" ? scss.active : ""
+              }`}
               onClick={() => handleBoxClick("Photo")}
             >
               <p>Photo</p>

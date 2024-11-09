@@ -3,8 +3,13 @@ import Image from "next/image";
 import scss from "./ChooseSections.module.scss";
 import america from "@/assets/img/america.png";
 import Selection from "../Selections/Selection";
+import { useGetCoutriesQuery } from "@/redux/api/curl";
+import Link from "next/link";
 
 const ChooseSections = () => {
+  // const { data } = useGetCoutriesQuery();
+  // console.log("🚀 ~ ChooseSections ~ data:", data);
+
   const countries = [
     { id: 1, name: "America", flag: "🇺🇸" },
     { id: 2, name: "Great Britain", flag: "🇬🇧" },
@@ -30,7 +35,14 @@ const ChooseSections = () => {
           <div className={scss.cards}>
             {countries.map((country) => (
               <div key={country.id} className={scss.card}>
-                <Image src={america} alt="america " width={172} height={172} />
+                <Link href="/study/contries/universities">
+                  <Image
+                    src={america}
+                    alt="america "
+                    width={172}
+                    height={172}
+                  />
+                </Link>
                 <h4>{country.name}</h4>
                 <h3>Higher education in the UK</h3>
               </div>
