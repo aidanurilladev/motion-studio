@@ -10,7 +10,7 @@ import PhotoSections from "./PhotoSections";
 
 const UniversitySections = () => {
   const [activeSection, setActiveSection] = useState<string>("Description");
-  const { t } = useTranslation(); // подключаем i18next для перевода
+  const { t } = useTranslation();
 
   const handleBoxClick = (section: string) => {
     setActiveSection(section);
@@ -20,7 +20,7 @@ const UniversitySections = () => {
     <section className={scss.UniversitySections}>
       <div className="container">
         <div className={scss.content}>
-          <h1>{t("university_title")}</h1> {/* Используем ключ для названия университета */}
+          <h1>{t("university_title")}</h1>
 
           <div className={scss.firstBlock}>
             <Image src={univer} alt="photo" width={550} height={550} />
@@ -28,24 +28,25 @@ const UniversitySections = () => {
             <div className={scss.infoUniversity}>
               <div className={scss.info}>
                 <span>{t("location_label")}</span>
-                <h4>{t("location")}</h4> {/* Используем ключ для местоположения */}
+                <h4>{t("location")}</h4> 
               </div>
               <div className={scss.info}>
                 <span>{t("foundation_date_label")}</span>
-                <h4>{t("foundation_date")}</h4> {/* Используем ключ для даты основания */}
+                <h4>{t("foundation_date")}</h4> 
               </div>
               <div className={scss.information}>
                 <span className={scss.type}>{t("program_type_label")}</span>
                 <div className={scss.infoBack}>
-                  <h4>{t("program_type")}</h4> {/* Используем ключ для типа программ */}
+                  <h4>{t("program_type")}</h4> 
                 </div>
               </div>
               <div className={scss.information}>
                 <span>{t("specialities_label")}</span>
                 <div className={scss.infoBack}>
-                  {t("specialities", { returnObjects: true }).map((specialty, index) => (
-                    <h4 key={index}>{specialty}</h4>
-                  ))}
+                  {Array.isArray(t("specialities", { returnObjects: true })) &&
+                    t("specialities", { returnObjects: true }).map((specialty, index) => (
+                      <h4 key={index}>{specialty}</h4>
+                    ))}
                 </div>
               </div>
               <div className={scss.info}>
@@ -62,7 +63,7 @@ const UniversitySections = () => {
               }`}
               onClick={() => handleBoxClick("Description")}
             >
-              <p>{t("description_section")}</p> {/* Используем ключ для раздела "Описание" */}
+              <p>{t("description_section")}</p> 
             </div>
             <div
               className={`${scss.box} ${
@@ -70,7 +71,7 @@ const UniversitySections = () => {
               }`}
               onClick={() => handleBoxClick("Cost")}
             >
-              <p>{t("cost_section")}</p> {/* Используем ключ для раздела "Стоимость" */}
+              <p>{t("cost_section")}</p>
             </div>
             <div
               className={`${scss.box} ${
@@ -78,7 +79,7 @@ const UniversitySections = () => {
               }`}
               onClick={() => handleBoxClick("Photo")}
             >
-              <p>{t("photo_section")}</p> {/* Используем ключ для раздела "Фото" */}
+              <p>{t("photo_section")}</p> 
             </div>
           </div>
 

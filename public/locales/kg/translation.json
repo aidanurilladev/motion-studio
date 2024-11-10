@@ -205,6 +205,11 @@
   "program_type_label": "Программалар түрү:",
   "program_type": "Бакалавриат Магистратура",
   "specialities_label": "Адистиктер:",
+  "language_label": "Тилдер:",
+  "languages": "Англисче, Итальянча",
+  "description_section": "Описание",
+  "cost_section": "Баасы",
+  "photo_section": "Сүрөт",
   "specialities": [
     "Мода жана дизайн",
     "Интерьер дизайны",
@@ -212,10 +217,5 @@
     "Ландшафт дизайны",
     "Фотография",
     "Автомобиль дизайны"
-  ],
-  "language_label": "Тилдер:",
-  "languages": "Англисче, Итальянча",
-  "description_section": "Описание",
-  "cost_section": "Баасы",
-  "photo_section": "Сүрөт"
+  ]
 }

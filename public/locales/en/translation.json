@@ -203,6 +203,11 @@
   "program_type_label": "Type of programs:",
   "program_type": "Bachelor Course Magistracy",
   "specialities_label": "Specialities:",
+  "language_label": "Language:",
+  "languages": "English, Italian",
+  "description_section": "Description",
+  "cost_section": "Cost",
+  "photo_section": "Photo",
   "specialities": [
     "Fashion and Design",
     "Interior design",
@@ -210,10 +215,5 @@
     "Landscape design",
     "Photography",
     "Car design"
-  ],
-  "language_label": "Language:",
-  "languages": "English, Italian",
-  "description_section": "Description",
-  "cost_section": "Cost",
-  "photo_section": "Photo"
+  ]
 }
