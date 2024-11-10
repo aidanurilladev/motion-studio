@@ -1,12 +1,15 @@
 .Header {
 	background: white;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	position: fixed; /* Добавлено фиксированное положение */
+	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
-	z-index: 2000; /* Убедитесь, что хедер будет поверх других элементов */
+	z-index: 2000;
 	.content {
+		.burgerMenu {
+			display: none;
+		}
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
