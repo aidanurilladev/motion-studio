@@ -1,0 +1,107 @@
+.Footer {
+	background-color: black;
+	.content {
+		width: 100%;
+		margin: 20px 0;
+		display: flex;
+		flex-direction: column;
+		.navs {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			h1 {
+				font-family: Silk Serif;
+				font-size: 28px;
+				font-weight: 600;
+				line-height: 43px;
+				letter-spacing: 0%;
+				text-align: left;
+			}
+			.inWeb {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 81px;
+				a {
+					color: rgb(255, 255, 255);
+					font-family: Spartan, sans-serif;
+					font-size: 16px;
+					font-weight: 500;
+					&::before {
+						content: '';
+						width: 100%;
+						height: 0px;
+					}
+					&::before:hover {
+						height: 2px;
+					}
+				}
+			}
+			.soc {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 24px;
+				a {
+					cursor: pointer;
+					img {
+						filter: brightness(0) invert(1); /* Применяем фильтр */
+					}
+				}
+			}
+		}
+		hr {
+			width: 100%;
+			border: 1px solid rgba(255, 255, 255, 0.8);
+			margin-top: 27px;
+			margin-bottom: 18px;
+		}
+		span {
+			text-align: center;
+			color: rgb(255, 255, 255);
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.Footer {
+		.content {
+			.navs {
+				.inWeb {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1015px) {
+	.Footer {
+		.content {
+			.navs {
+				gap: 20px;
+				.inWeb {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.Footer {
+		.content {
+			.navs {
+				.soc {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 10px;
+				}
+			}
+			span {
+				text-align: start;
+			}
+		}
+	}
+}
