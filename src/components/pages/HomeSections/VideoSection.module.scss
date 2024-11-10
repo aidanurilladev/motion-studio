@@ -26,3 +26,17 @@
 		}
 	}
 }
+
+@media (max-width: 425px) {
+	.VideoSection {
+		.content {
+			h1 {
+				font-size: 30px;
+			}
+			iframe {
+				width: 322.77px;
+				height: 211.97px;
+			}
+		}
+	}
+}
