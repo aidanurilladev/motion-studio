@@ -3,12 +3,12 @@ import Image from "next/image";
 import scss from "./ChooseSections.module.scss";
 import america from "@/assets/img/america.png";
 import Selection from "../Selections/Selection";
-import { useGetCoutriesQuery } from "@/redux/api/curl";
 import Link from "next/link";
+import { useGetCoutriesQuery } from "@/redux/api/curl";
 
 const ChooseSections = () => {
-  // const { data } = useGetCoutriesQuery();
-  // console.log("🚀 ~ ChooseSections ~ data:", data);
+  const { data } = useGetCoutriesQuery();
+  console.log("🚀 ~ ChooseSections ~ data:", data);
 
   const countries = [
     { id: 1, name: "America", flag: "🇺🇸" },
