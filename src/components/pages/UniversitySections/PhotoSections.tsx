@@ -9,14 +9,48 @@ const PhotoSections = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.block}>
-            <Image className={scss.img} src={img} alt="photo" />
-            <Image className={scss.img} src={img} alt="photo" />
-            <Image className={scss.img} src={img} alt="photo" />
-            <Image className={scss.img} src={img} alt="photo" />
-            <Image className={scss.img} src={img} alt="photo" />
-            <Image className={scss.img} src={img} alt="photo" />
-            <Image className={scss.img} src={img} alt="photo" />
-            <Image className={scss.img} src={img} alt="photo" />
+            <Image
+              width={300}
+              height={300}
+              className={scss.img}
+              src={img}
+              alt="photo"
+            />
+            <Image
+              width={300}
+              height={300}
+              className={scss.img}
+              src={img}
+              alt="photo"
+            />
+            <Image
+              width={300}
+              height={300}
+              className={scss.img}
+              src={img}
+              alt="photo"
+            />
+            <Image
+              width={300}
+              height={300}
+              className={scss.img}
+              src={img}
+              alt="photo"
+            />
+            <Image
+              width={300}
+              height={300}
+              className={scss.img}
+              src={img}
+              alt="photo"
+            />
+            <Image
+              width={300}
+              height={300}
+              className={scss.img}
+              src={img}
+              alt="photo"
+            />
           </div>
         </div>
       </div>

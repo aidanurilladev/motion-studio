@@ -23,7 +23,7 @@ const DescriptionSections = () => {
       value: "€120 one-time US$128.83",
     },
     {
-      title: "Registration : ",
+      title: "Registration fee: ",
       value:
         "US$150 one-time US$150 one-time You need to choose student status:Base – 150 USD Standard – 500 USD VIP – 900 USD",
     },
@@ -36,11 +36,11 @@ const DescriptionSections = () => {
             {data.map((el, idx) => (
               <div key={idx} className={scss.table}>
                 <div className={scss.box1}>
-                  <h3>{el.title}</h3>
+                  <p>{el.title}</p>
                 </div>
                 <div className={scss.box2}>
-                  <h1>landscape design</h1>
                   <p>{el.value}</p>
+                  <hr />
                 </div>
               </div>
             ))}
