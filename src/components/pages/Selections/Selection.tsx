@@ -1,3 +1,4 @@
+"use client";
 import scss from "./selection.module.scss";
 
 const Selection = () => {
