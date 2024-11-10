@@ -5,8 +5,11 @@ import scss from "./UnitedSections.module.scss";
 import SolbrigeUniversity from "@/assets/img/SolbrigeUniversity.png";
 import { IoLocationOutline } from "react-icons/io5";
 import Link from "next/link";
+import { useTranslation } from "react-i18next"; 
 
 const UnitedSections = () => {
+  const { t } = useTranslation(); 
+
   const universities = [
     {
       id: 1,
@@ -63,7 +66,7 @@ const UnitedSections = () => {
     <section className={scss.UnitedSections}>
       <div className="container">
         <div className={scss.content}>
-          <h1>United Stated</h1>
+          <h1>{t("united_states_title")}</h1>
           <Selection />
 
           <div className={scss.universities}>
@@ -79,17 +82,17 @@ const UnitedSections = () => {
                 </Link>
                 <div className={scss.info}>
                   <div className={scss.name}>
-                    <h6>Name:</h6>
+                    <h6>{t("name")}</h6> 
                     <h3>{university.name}</h3>
                   </div>
                   <div className={scss.location}>
                     <h6>
-                      Location <IoLocationOutline />
-                    </h6>
+                      {t("location")} <IoLocationOutline />
+                    </h6> 
                     <h3>{university.location}</h3>
                   </div>
                   <div className={scss.age}>
-                    <h6>Age:</h6>
+                    <h6>{t("age")}</h6> 
                     <h3>{university.age}</h3>
                   </div>
                 </div>

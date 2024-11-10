@@ -1,14 +1,17 @@
+// src/components/ChooseSections/ChooseSections.js
 "use client";
 import Image from "next/image";
 import scss from "./ChooseSections.module.scss";
 import america from "@/assets/img/america.png";
 import Selection from "../Selections/Selection";
-import { useGetCoutriesQuery } from "@/redux/api/curl";
 import Link from "next/link";
+import { useGetCoutriesQuery } from "@/redux/api/curl";
+import { useTranslation } from "react-i18next";
 
 const ChooseSections = () => {
-  // const { data } = useGetCoutriesQuery();
-  // console.log("🚀 ~ ChooseSections ~ data:", data);
+  const { t } = useTranslation();
+  const { data } = useGetCoutriesQuery();
+  console.log("🚀 ~ ChooseSections ~ data:", data);
 
   const countries = [
     { id: 1, name: "America", flag: "🇺🇸" },
@@ -29,7 +32,7 @@ const ChooseSections = () => {
     <section className={scss.ChooseSections}>
       <div className="container">
         <div className={scss.content}>
-          <h1>Choose the country</h1>
+          <h1>{t("chooseCountry")}</h1> 
           <Selection />
 
           <div className={scss.cards}>
@@ -44,7 +47,7 @@ const ChooseSections = () => {
                   />
                 </Link>
                 <h4>{country.name}</h4>
-                <h3>Higher education in the UK</h3>
+                <h3>{t("higherEducationUK")}</h3> 
               </div>
             ))}
           </div>

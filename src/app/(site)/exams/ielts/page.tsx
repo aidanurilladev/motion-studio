@@ -1,3 +1,4 @@
+"use client"
 import IeltsSection from '@/components/pages/IeltsSection/IeltsSection'
 
 const page = () => {

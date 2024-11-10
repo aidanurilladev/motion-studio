@@ -20,7 +20,6 @@
 				font-size: 20px;
 				font-weight: 400;
 				line-height: 24px;
-				letter-spacing: 0%;
 				text-align: center;
 			}
 		}
@@ -143,6 +142,165 @@
 							font-family: Montserrat;
 							font-size: 12px;
 							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.Exams {
+		.content {
+			.contentText {
+				justify-content: start;
+				align-items: start;
+				p {
+					align-items: start;
+				}
+			}
+			.blocks {
+				.boxes {
+					.box {
+						width: 434px;
+						height: 155px;
+						img {
+							width: 141px;
+							height: 98px;
+							margin-left: 18px;
+						}
+						.boxContent {
+							.Aptis {
+								width: 44px;
+								height: 16px;
+								font-size: 10px;
+							}
+							h2 {
+								font-size: 13px;
+							}
+							p {
+								font-size: 9px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.Exams {
+		.content {
+			.contentText {
+				justify-content: start;
+				p {
+					text-align: start;
+				}
+			}
+			.blocks {
+				flex-wrap: wrap;
+				justify-content: center;
+				.block {
+					width: 100%;
+					height: 800px;
+					margin: 0px;
+
+					img {
+						width: 100%;
+						height: 600px;
+						object-fit: cover;
+					}
+				}
+				.boxes {
+					margin-top: 50px;
+					.box {
+						width: 100%;
+						justify-content: start;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.Exams {
+		.content {
+			.contentText {
+				h1 {
+					font-size: 28px;
+				}
+				p {
+					font-size: 16px;
+				}
+			}
+			.blocks {
+				// justify-content: start;
+				.block {
+					width: 100%;
+					height: 395px;
+					img {
+						height: 200px;
+						object-fit: cover;
+					}
+					.cambrige {
+						font-size: 14px;
+						margin-left: 16px;
+					}
+					h2 {
+						font-size: 16px;
+						margin: 10px 0px 5px 16px;
+					}
+					p {
+						font-size: 12px;
+						margin: 0px 0px 13px 16px;
+					}
+					button {
+						a {
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 375px) {
+	.Exams {
+		.content {
+			.blocks {
+				.boxes {
+					.box {
+						padding: 0;
+						height: 271px;
+						flex-direction: column;
+						img {
+							width: 100%;
+							object-fit: cover;
+							height: 121px;
+							margin-left: 0px;
+							border-top-right-radius: 8px;
+							border-top-left-radius: 8px;
+						}
+						.boxContent {
+							margin-left: 16px;
+							margin-top: 13px;
+							.Aptis {
+								width: 76px;
+								height: 23px;
+								font-size: 14px;
+							}
+							h2 {
+								font-size: 16px;
+								margin: 10px 0px 5px 0px;
+							}
+							p {
+								font-size: 12px;
+								line-height: 15px;
+							}
 						}
 					}
 				}

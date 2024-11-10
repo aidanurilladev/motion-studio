@@ -1,0 +1,166 @@
+.BestForm {
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 205px;
+		.contentText {
+			h1 {
+				color: rgb(33, 33, 33);
+				font-family: Gilroy;
+				font-size: 48px;
+				font-weight: 700;
+				max-width: 423px;
+			}
+			p {
+				color: rgb(1, 13, 57);
+				font-family: Montserrat;
+				font-size: 18px;
+				font-weight: 400;
+				max-width: 555px;
+				line-height: 33px;
+				margin: 30px 0px 50px 0px;
+			}
+			img {
+				width: 540px;
+				height: 310px;
+			}
+		}
+		.contentBlock {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 45px;
+			.block {
+				padding: 47px 0px 69px 26px;
+				border-radius: 8px;
+				box-shadow: 5px 8px 24px 0px rgba(0, 0, 0, 0.1);
+				background: rgb(255, 255, 255);
+				width: 272px;
+				height: 297px;
+				h2 {
+					color: rgb(1, 13, 57);
+					font-family: Gilroy;
+					font-size: 22px;
+					font-weight: 600;
+					line-height: 27px;
+					margin: 25px 0px;
+				}
+				p {
+					color: rgb(0, 18, 84);
+					font-family: Montserrat;
+					font-size: 14px;
+					font-weight: 400;
+					line-height: 19px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.BestForm {
+		.content {
+			gap: 100px;
+			.contentText {
+				h1 {
+					font-size: 38px;
+				}
+				p {
+					font-size: 16px;
+					line-height: 20px;
+				}
+				img {
+					width: 401px;
+					height: 230px;
+				}
+			}
+			.contentBlock {
+				gap: 20px;
+				.block {
+					width: 185px;
+					height: 203px;
+					h2 {
+						margin: 18px 0px;
+						font-size: 15px;
+					}
+					p {
+						font-size: 9px;
+						line-height: 0;
+						line-height: 14.27px;
+					}
+					img {
+						width: 31px;
+						height: 31px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.BestForm {
+		.content {
+			flex-wrap: wrap;
+			.contentText {
+				h1 {
+					font-size: 48px;
+				}
+				p {
+					font-size: 18px;
+					margin: 20px 0px;
+				}
+				img {
+					width: 540px;
+					height: 310px;
+				}
+			}
+			.contentBlock {
+				gap: 100px;
+				.block {
+					width: 272px;
+					height: 297px;
+					img {
+						width: 46px;
+						height: 46px;
+					}
+					h2 {
+						font-size: 22px;
+					}
+					p {
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.BestForm {
+		.content {
+			.contentText {
+				h1 {
+					font-size: 34px;
+				}
+				img {
+					width: 100%;
+					height: 192px;
+					object-fit: cover;
+				}
+			}
+			.contentBlock {
+				gap: 30px;
+				.block {
+					width: 100%;
+					height: 220px;
+					display: flex;
+					align-items: center;
+					gap: 20px;
+					flex-wrap: wrap;
+				}
+			}
+		}
+	}
+}

@@ -1,6 +1,12 @@
+"use client";
 import United from "@/components/pages/United";
-import React from "react";
 
-const page = () => <United />;
+const page = () => {
+  return (
+    <div>
+      <United />
+    </div>
+  );
+};
 
 export default page;

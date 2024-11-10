@@ -1,27 +1,24 @@
+"use client"
 import Image from "next/image";
 import scss from "./AboutSections.module.scss";
 import aboutImg from "@/assets/img/about.svg";
+import { useTranslation } from "react-i18next";
 
 const AboutSections = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={scss.AboutSections}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.img}>
-            <Image className={scss.aboutSvg} src={aboutImg} alt="about" />
+            <Image className={scss.aboutSvg} src={aboutImg} alt={t("aboutUs")} />
           </div>
           <div className={scss.aboutUs}>
-            <h3>About Us</h3>
-            <h1 className="title">Best Education Platform</h1>
-            <p>
-              Apparently we had reached a great height in the atmosphere, for
-              the sky was a dead black.
-            </p>
-            <p>
-              By the same illusion which lifts the horizon of the sea to the
-              level of the spectator on a hillside, the sable cloud beneath was
-              dished out, and the car seemed to float in the middle.
-            </p>
+            <h3>{t("aboutUs")}</h3>
+            <h1 className="title">{t("bestEducationPlatform")}</h1>
+            <p>{t("aboutUsText1")}</p>
+            <p>{t("aboutUsText2")}</p>
           </div>
         </div>
       </div>

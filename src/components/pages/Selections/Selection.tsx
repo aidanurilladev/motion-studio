@@ -1,28 +1,31 @@
+"use client";
+import { useTranslation } from "react-i18next";
 import scss from "./selection.module.scss";
 
 const Selection = () => {
+  const { t } = useTranslation();
   const selections = [
     {
       options: [
-        "Higher Education",
-        "Secondary Education",
-        "Higher Education",
-        "Language courses for youth",
-        "Children’s language camps",
+        t("higher_education"),
+        t("secondary_education"),
+        t("higher_education"),
+        t("language_courses_youth"),
+        t("childrens_language_camps"),
       ],
     },
     {
       options: [
-        "Specialization",
-        "IT Technologies",
-        "Business",
-        "Medicine",
-        "International Relationships",
-        "Tourism",
+        t("specialization"),
+        t("it_technologies"),
+        t("business"),
+        t("medicine"),
+        t("international_relationships"),
+        t("tourism"),
       ],
     },
     {
-      options: ["Countries", "America", "Germany", "Indonesia", "South Korea"],
+      options: [t("countries"), t("america"), t("germany"), t("indonesia"), t("south_korea")],
     },
   ];
 

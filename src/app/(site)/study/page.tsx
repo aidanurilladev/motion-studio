@@ -1,3 +1,4 @@
+"use client"
 import Study from "@/components/pages/Study";
 
 const page = () => {
