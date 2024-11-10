@@ -17,6 +17,7 @@ const VideoSection = () => {
                 src='https://www.youtube.com/embed/lWz-46NPqdk?si=yyDXQy8y1xDWXbIc'
                 title='YouTube video player'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+								id='1'
               ></iframe>
               <iframe
                 width='570px'

@@ -44,7 +44,7 @@ const UniversitySections = () => {
                 <span>{t("specialities_label")}</span>
                 <div className={scss.infoBack}>
                   {Array.isArray(t("specialities", { returnObjects: true })) &&
-                    t("specialities", { returnObjects: true }).map((specialty, index) => (
+                    t("specialities", { returnObjects: true }).map((specialty: string, index: number) => (
                       <h4 key={index}>{specialty}</h4>
                     ))}
                 </div>
