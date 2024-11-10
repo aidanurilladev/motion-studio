@@ -32,8 +32,8 @@ const HomeSection = () => {
               <div className={scss.small}>
                 <Image
                   className={scss.img2}
-                  width={302}
-                  height={302}
+                  width={280}
+                  height={280}
                   src={medium}
                   alt="image1"
                 />
@@ -44,8 +44,8 @@ const HomeSection = () => {
               <div className={scss.medium}>
                 <Image
                   className={scss.img3}
-                  width={302}
-                  height={302}
+                  width={280}
+                  height={280}
                   src={large2}
                   alt="image1"
                 />
