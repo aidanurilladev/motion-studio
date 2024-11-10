@@ -32,7 +32,7 @@ const Header: FC = () => {
               </svg>
             </div>
             <select name="" id="">
-              <option value="ru">EN</option>
+              <option value="en">EN</option>
               <option value="ru">RU</option>
               <option value="kg">KG</option>
             </select>
