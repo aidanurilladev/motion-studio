@@ -8,7 +8,7 @@ import instagram from '@/assets/img/Instagram.svg'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './BurgerMenu.module.scss'
 
@@ -21,6 +21,7 @@ export default function BurgerMenu() {
 		i18n?.changeLanguage(lang)
 	}
 
+	const pathname = usePathname()
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
 			const target = event.target as HTMLElement; 
@@ -69,19 +70,19 @@ export default function BurgerMenu() {
 				<div className={styles.menuOverlay}>
 					<nav className={styles.menuNav}>
 						<Link
-							className={router.pathname === '/' ? styles.active : ''}
+							className={pathname === '/' ? styles.active : ''}
 							href='/'
 						>
 							{t('home')}
 						</Link>
 						<Link
-							className={router.pathname === '/about' ? styles.active : ''}
+							className={pathname === '/about' ? styles.active : ''}
 							href='/about'
 						>
 							{t('about_us')}
 						</Link>
 						<Link
-							className={router.pathname === '/study' ? styles.active : ''}
+							className={pathname === '/study' ? styles.active : ''}
 							href='/study'
 						>
 							{t('study_abroad')}
