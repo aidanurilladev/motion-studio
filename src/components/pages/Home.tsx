@@ -5,7 +5,9 @@ import VideSection from './HomeSections/VideSection'
 
 const Home = () => {
 	return (
-		<div>
+		<div style={{
+			position: "relative"
+		}}>
 			<HomeSection />
 			<BestFormSection />
 			<ExamSection />

@@ -1,3 +1,4 @@
+"use client"
 import OtherExamSection from '@/components/pages/OtherExamSection/OtherExamSection'
 
 const page = () => {

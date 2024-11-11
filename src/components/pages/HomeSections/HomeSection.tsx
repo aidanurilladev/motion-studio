@@ -4,19 +4,19 @@ import large1 from "@/assets/img/large1.png";
 import large2 from "@/assets/img/large2.png";
 import small from "@/assets/img/small.png";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const HomeSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={scss.HomeSection}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.firstBlock}>
-            <h6>EXPLORE THE WORLD</h6>
-            <h1>Study abroad with our help</h1>
-            <p>
-              Study at the world's top universities and expand your horizons.
-              Get the highest quality education and achieve success abroad.
-            </p>
+            <h6>{t("discoverWorld")}</h6>
+            <h1>{t("globalStudyOpportunity")}</h1>
+            <p>{t("globalStudyDescription")}</p>
           </div>
           <div className={scss.secondBlock}>
             <div className={scss.first}>

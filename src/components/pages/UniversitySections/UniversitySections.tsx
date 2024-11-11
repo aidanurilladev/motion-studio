@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import scss from "./UniversitySections.module.scss";
+import { useTranslation } from "react-i18next";
 import univer from "@/assets/img/UniversityImage.png";
 import DescriptionSections from "@/components/pages/UniversitySections/DescriptionSections";
 import CostSections from "./CostSections";
@@ -9,6 +10,7 @@ import PhotoSections from "./PhotoSections";
 
 const UniversitySections = () => {
   const [activeSection, setActiveSection] = useState<string>("Description");
+  const { t } = useTranslation();
 
   const handleBoxClick = (section: string) => {
     setActiveSection(section);
@@ -18,40 +20,38 @@ const UniversitySections = () => {
     <section className={scss.UniversitySections}>
       <div className="container">
         <div className={scss.content}>
-          <h1>Solbrige University</h1>
+          <h1>{t("university_title")}</h1>
 
           <div className={scss.firstBlock}>
             <Image src={univer} alt="photo" width={550} height={550} />
 
             <div className={scss.infoUniversity}>
               <div className={scss.info}>
-                <span>Location:</span>
-                <h4>Australia, Milan, Rim</h4>
+                <span>{t("location_label")}</span>
+                <h4>{t("location")}</h4> 
               </div>
               <div className={scss.info}>
-                <span>Date of foundation :</span>
-                <h4>1996</h4>
+                <span>{t("foundation_date_label")}</span>
+                <h4>{t("foundation_date")}</h4> 
               </div>
               <div className={scss.information}>
-                <span className={scss.type}>Type of programs:</span>
+                <span className={scss.type}>{t("program_type_label")}</span>
                 <div className={scss.infoBack}>
-                  <h4>Bachelor Course Magistracy</h4>
+                  <h4>{t("program_type")}</h4> 
                 </div>
               </div>
               <div className={scss.information}>
-                <span>Specialities :</span>
+                <span>{t("specialities_label")}</span>
                 <div className={scss.infoBack}>
-                  <h4>Fashion and Design</h4>
-                  <h4>Interior design</h4>
-                  <h4>Jewelry design</h4>
-                  <h4>Landscape design</h4>
-                  <h4>Photography</h4>
-                  <h4>Car design</h4>
+                  {Array.isArray(t("specialities", { returnObjects: true })) &&
+                    t("specialities", { returnObjects: true }).map((specialty: string, index: number) => (
+                      <h4 key={index}>{specialty}</h4>
+                    ))}
                 </div>
               </div>
               <div className={scss.info}>
-                <span>Language:</span>
-                <h4>English, Italian</h4>
+                <span>{t("language_label")}</span>
+                <h4>{t("languages")}</h4>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const UniversitySections = () => {
               }`}
               onClick={() => handleBoxClick("Description")}
             >
-              <p>Description</p>
+              <p>{t("description_section")}</p> 
             </div>
             <div
               className={`${scss.box} ${
@@ -71,7 +71,7 @@ const UniversitySections = () => {
               }`}
               onClick={() => handleBoxClick("Cost")}
             >
-              <p>Cost</p>
+              <p>{t("cost_section")}</p>
             </div>
             <div
               className={`${scss.box} ${
@@ -79,7 +79,7 @@ const UniversitySections = () => {
               }`}
               onClick={() => handleBoxClick("Photo")}
             >
-              <p>Photo</p>
+              <p>{t("photo_section")}</p> 
             </div>
           </div>
 
