@@ -2,7 +2,6 @@ import { FC, ReactNode } from "react";
 import scss from "./LayoutSite.module.scss";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
-import VideoModals from "../ui/VideoModals/VideoModals";
 
 interface LayoutSiteProps {
   children: ReactNode;
