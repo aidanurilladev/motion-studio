@@ -22,24 +22,26 @@ export default function BurgerMenu() {
 	}
 
 	useEffect(() => {
-		const handleClickOutside = (event: any) => {
-			if (isOpen && !event.target.closest(`.${styles.aa}`)) {
-				setIsOpen(false)
+		const handleClickOutside = (event: MouseEvent) => {
+			const target = event.target as HTMLElement; 
+			if (isOpen && !target.closest(`.${styles.aa}`)) {
+				setIsOpen(false);
 			}
-		}
-
+		};
+	
 		if (isOpen) {
-			document.body.style.overflow = 'hidden'
+			document.body.style.overflow = 'hidden';
 		} else {
-			document.body.style.overflow = 'auto'
+			document.body.style.overflow = 'auto';
 		}
-
-		document.addEventListener('click', handleClickOutside)
-
+	
+		document.addEventListener('click', handleClickOutside);
+	
 		return () => {
-			document.removeEventListener('click', handleClickOutside)
-		}
-	}, [isOpen])
+			document.removeEventListener('click', handleClickOutside);
+		};
+	}, [isOpen]);
+	
 
 	return (
 		<div className={styles.burgerMenu}>
