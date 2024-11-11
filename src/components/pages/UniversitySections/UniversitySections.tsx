@@ -12,6 +12,8 @@ const UniversitySections = () => {
   const [activeSection, setActiveSection] = useState<string>("Description");
   const { t } = useTranslation();
 
+  const specialities = t("specialities", { returnObjects: true }) as string[];
+
   const handleBoxClick = (section: string) => {
     setActiveSection(section);
   };
@@ -28,23 +30,23 @@ const UniversitySections = () => {
             <div className={scss.infoUniversity}>
               <div className={scss.info}>
                 <span>{t("location_label")}</span>
-                <h4>{t("location")}</h4> 
+                <h4>{t("location")}</h4>
               </div>
               <div className={scss.info}>
                 <span>{t("foundation_date_label")}</span>
-                <h4>{t("foundation_date")}</h4> 
+                <h4>{t("foundation_date")}</h4>
               </div>
               <div className={scss.information}>
                 <span className={scss.type}>{t("program_type_label")}</span>
                 <div className={scss.infoBack}>
-                  <h4>{t("program_type")}</h4> 
+                  <h4>{t("program_type")}</h4>
                 </div>
               </div>
               <div className={scss.information}>
                 <span>{t("specialities_label")}</span>
                 <div className={scss.infoBack}>
-                  {Array.isArray(t("specialities", { returnObjects: true })) &&
-                    t("specialities", { returnObjects: true }).map((specialty: string, index: number) => (
+                  {Array.isArray(specialities) &&
+                    specialities.map((specialty, index) => (
                       <h4 key={index}>{specialty}</h4>
                     ))}
                 </div>
@@ -63,7 +65,7 @@ const UniversitySections = () => {
               }`}
               onClick={() => handleBoxClick("Description")}
             >
-              <p>{t("description_section")}</p> 
+              <p>{t("description_section")}</p>
             </div>
             <div
               className={`${scss.box} ${
@@ -79,7 +81,7 @@ const UniversitySections = () => {
               }`}
               onClick={() => handleBoxClick("Photo")}
             >
-              <p>{t("photo_section")}</p> 
+              <p>{t("photo_section")}</p>
             </div>
           </div>
 
