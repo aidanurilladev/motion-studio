@@ -1,18 +1,25 @@
 'use client'
-
 import email from '@/assets/img/BurgerEmails.svg'
 import burgerMenu from '@/assets/img/burgermenu.png'
 import telegram from '@/assets/img/BurgerTelegrams.svg'
 import telephone from '@/assets/img/BurgerTelephone.svg'
 import x from '@/assets/img/close.png'
 import instagram from '@/assets/img/Instagram.svg'
+import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './BurgerMenu.module.scss'
 
 export default function BurgerMenu() {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
+	const { t, i18n } = useTranslation()
+	const router = useRouter()
+
+	const handleLanguage = (lang: string) => {
+		i18n?.changeLanguage(lang)
+	}
 
 	useEffect(() => {
 		const handleClickOutside = (event: any) => {
@@ -59,17 +66,47 @@ export default function BurgerMenu() {
 			{isOpen && (
 				<div className={styles.menuOverlay}>
 					<nav className={styles.menuNav}>
-						<Link href='/'>Home</Link>
-						<Link href='/about'>About Us</Link>
-						<Link href='/study'>Study Abroad</Link>
+						<Link
+							className={router.pathname === '/' ? styles.active : ''}
+							href='/'
+						>
+							{t('home')}
+						</Link>
+						<Link
+							className={router.pathname === '/about' ? styles.active : ''}
+							href='/about'
+						>
+							{t('about_us')}
+						</Link>
+						<Link
+							className={router.pathname === '/study' ? styles.active : ''}
+							href='/study'
+						>
+							{t('study_abroad')}
+						</Link>
 						<Link onClick={() => setIsOpen(false)} href='#contact'>
-							Contacts
+							{t('contacts')}
 						</Link>
 					</nav>
-					<div className={styles.languageSwitcher}>
-						<span>EN</span>
-						<span>RU</span>
-						<span>KG</span>
+					<div className={styles.languageChange}>
+						<span
+							className={i18n.language === 'en' ? styles.activeLang : ''}
+							onClick={() => handleLanguage('en')}
+						>
+							EN
+						</span>
+						<span
+							className={i18n.language === 'ru' ? styles.activeLang : ''}
+							onClick={() => handleLanguage('ru')}
+						>
+							RU
+						</span>
+						<span
+							className={i18n.language === 'kg' ? styles.activeLang : ''}
+							onClick={() => handleLanguage('kg')}
+						>
+							KG
+						</span>
 					</div>
 					<div className={styles.soc}>
 						<Link href='#'>

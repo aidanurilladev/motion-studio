@@ -1,85 +1,85 @@
 .Header {
-  background: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: fixed; /* Добавлено фиксированное положение */
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2000; /* Убедитесь, что хедер будет поверх других элементов */
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .Logo {
-      img {
-        width: 50px;
-        height: 50px;
-      }
-    }
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      a {
-        color: #333;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 16px;
-        transition: color 0.3s ease;
-        padding: 8px 12px;
-        border-radius: 5px;
-      }
-    }
-    .headerInput {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      .searchInput {
-        position: relative;
-        input {
-          width: 200px;
-          padding: 10px 12px 10px 35px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-          transition: box-shadow 0.3s ease, border-color 0.3s ease;
-        }
-        .searchIcon {
-          position: absolute;
-          left: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          color: #888;
-          font-size: 14px;
-        }
-      }
-      select {
-        padding: 8px 12px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        background-color: transparent;
-        font-weight: 500;
-        color: #333;
-        cursor: pointer;
-      }
-    }
-    .burgerMenu {
-      display: none;
-    }
-  }
+	background: white;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	position: fixed; /* Добавлено фиксированное положение */
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2000; /* Убедитесь, что хедер будет поверх других элементов */
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.Logo {
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+		.nav {
+			display: flex;
+			align-items: center;
+			gap: 25px;
+			a {
+				color: #333;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 16px;
+				transition: color 0.3s ease;
+				padding: 8px 12px;
+				border-radius: 5px;
+			}
+		}
+		.headerInput {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			.searchInput {
+				position: relative;
+				input {
+					width: 200px;
+					padding: 10px 12px 10px 35px;
+					border: 1px solid #ccc;
+					border-radius: 5px;
+					transition: box-shadow 0.3s ease, border-color 0.3s ease;
+				}
+				.searchIcon {
+					position: absolute;
+					left: 10px;
+					top: 50%;
+					transform: translateY(-50%);
+					color: #888;
+					font-size: 14px;
+				}
+			}
+			select {
+				padding: 8px 12px;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+				background-color: transparent;
+				font-weight: 500;
+				color: #333;
+				cursor: pointer;
+			}
+		}
+		.burgerMenu {
+			display: none;
+		}
+	}
 }
 
 @media (max-width: 920px) {
-  .Header {
-    .content {
-      .headerInput {
-        display: none;
-      }
-      .nav {
-        display: none;
-      }
-      .burgerMenu {
-        display: flex;
-      }
-    }
-  }
+	.Header {
+		.content {
+			.headerInput {
+				display: none;
+			}
+			.nav {
+				display: none;
+			}
+			.burgerMenu {
+				display: flex;
+			}
+		}
+	}
 }
