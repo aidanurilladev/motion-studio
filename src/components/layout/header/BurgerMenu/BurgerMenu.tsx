@@ -1,5 +1,4 @@
 'use client'
-
 import email from '@/assets/img/BurgerEmails.svg'
 import burgerMenu from '@/assets/img/burgermenu.png'
 import telegram from '@/assets/img/BurgerTelegrams.svg'
@@ -8,11 +7,14 @@ import x from '@/assets/img/close.png'
 import instagram from '@/assets/img/Instagram.svg'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './BurgerMenu.module.scss'
 
 export default function BurgerMenu() {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
+
+	const router = useRouter()
 
 	useEffect(() => {
 		const handleClickOutside = (event: any) => {
@@ -59,9 +61,24 @@ export default function BurgerMenu() {
 			{isOpen && (
 				<div className={styles.menuOverlay}>
 					<nav className={styles.menuNav}>
-						<Link href='/'>Home</Link>
-						<Link href='/about'>About Us</Link>
-						<Link href='/study'>Study Abroad</Link>
+						<Link
+							className={router.pathname === '/' ? styles.active : ''}
+							href='/'
+						>
+							Home
+						</Link>
+						<Link
+							className={router.pathname === '/about' ? styles.active : ''}
+							href='/about'
+						>
+							About Us
+						</Link>
+						<Link
+							className={router.pathname === '/study' ? styles.active : ''}
+							href='/study'
+						>
+							Study Abroad
+						</Link>
 						<Link onClick={() => setIsOpen(false)} href='#contact'>
 							Contacts
 						</Link>

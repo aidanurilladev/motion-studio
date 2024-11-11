@@ -43,6 +43,9 @@
 				font-family: Montserrat;
 				font-size: 20px;
 				font-weight: 500;
+				.active {
+					color: red;
+				}
 			}
 			a:hover {
 				background: rgba(128, 128, 128, 0.444);
