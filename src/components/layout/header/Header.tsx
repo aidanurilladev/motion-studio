@@ -29,7 +29,7 @@ const Header: FC = () => {
 						<Link href='/'>{t('home')}</Link>
 						<Link href='/about'>{t('about_us')}</Link>
 						<Link href='/study'>{t('study_abroad')}</Link>
-						<Link href='#'>{t('contacts')}</Link>
+						<Link href='#contacts'>{t('contacts')}</Link>
 					</div>
 					<div className={scss.headerInput}>
 						<div className={scss.searchInput}>
