@@ -1,57 +1,64 @@
 .OurTeam {
-	margin-top: 150px;
-	.content {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		@media (max-width: 375px) {
-			align-items: center;
-			justify-content: center;
-		}
-		.team {
-			width: 100%;
-			display: grid;
-			grid-template-columns: 23% 23% 23%;
-			align-content: center;
-			align-items: center;
-			justify-content: space-between;
-			gap: 10%;
-			margin-top: 150px;
-			@media (max-width: 450px) {
-				grid-template-columns: 100%;
-				align-items: center;
-				justify-content: center;
-				gap: 30px;
-			}
-			.person {
-				width: 315px;
-				height: 450px;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: flex-start;
-				gap: 15px;
-				border-radius: 8px;
-				box-shadow: 0 5px 8px 0 #0000001a;
-				transition: 0.4s;
-				&:hover {
-					transform: scale(110%);
-				}
-				h2 {
-					margin-top: 28px;
-					font-family: 'Gilroy';
-					font-size: 20px;
-					font-weight: 500;
-				}
-				p {
-					text-align: center;
-					font-size: 18px;
-					font-weight: 500;
-					color: #7b6aff80;
-				}
-			}
-		}
-	}
+  margin-top: 150px;
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (max-width: 450px) {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .team {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 23% 23% 23%;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10%;
+      margin-top: 150px;
+
+      @media (max-width: 450px) {
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .person {
+        width: 315px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        border-radius: 8px;
+        box-shadow: 0 5px 8px 0 #0000001a;
+        transition: 0.4s;
+
+        &:hover {
+          transform: scale(110%);
+        }
+
+        h2 {
+          margin-top: 28px;
+          font-family: "Gilroy";
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        p {
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: #7b6aff80;
+        }
+      }
+    }
+  }
 }

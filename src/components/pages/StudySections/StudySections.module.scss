@@ -10,7 +10,7 @@
     grid-template-columns: 50% 50%;
     align-items: flex-start;
     gap: 20px;
-    @media (max-width: 375px) {
+    @media (max-width: 450px) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -24,8 +24,8 @@
       height: 370px;
       background-color: transparent;
       border: 3px solid #000;
-      
-      @media (max-width: 375px) {
+
+      @media (max-width: 450px) {
         height: 319px;
       }
       .imgAbroad {
@@ -34,7 +34,7 @@
         transition: 0.4s;
         &:hover {
           transform: scale(120%) translateX(-70px) translateY(60px);
-          @media (max-width: 375px) {
+          @media (max-width: 450px) {
             transform: scale(110%) translateX(-20px) translateY(20px);
           }
         }

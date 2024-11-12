@@ -7,7 +7,7 @@
         color: #36adf0;
       }
 
-      @media (max-width: 375px) {
+      @media (max-width: 450px) {
         font-size: 16px;
         line-height: 25px;
       }
@@ -19,7 +19,7 @@
         padding: 8px 0;
 
         font-size: clamp(15px, 6vw, 22px);
-        @media (max-width: 375px) {
+        @media (max-width: 450px) {
           line-height: 30px;
           font-size: 16px;
           font-weight: 300;
