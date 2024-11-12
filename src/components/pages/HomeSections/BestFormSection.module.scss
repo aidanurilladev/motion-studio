@@ -38,6 +38,18 @@
 				background: rgb(255, 255, 255);
 				width: 272px;
 				height: 297px;
+				transition: 0.4s;
+				&:hover {
+					transform: scale(1.05);
+				}
+				img {
+					width: 30px;
+					height: 30px;
+				}
+				flex-wrap: wrap;
+				h2 {
+					font-size: 16px;
+				}
 				h2 {
 					color: rgb(1, 13, 57);
 					font-family: Gilroy;
@@ -137,7 +149,7 @@
 	}
 }
 
-@media (max-width: 425px) {
+@media (max-width: 430px) {
 	.BestForm {
 		.content {
 			.contentText {
@@ -159,6 +171,37 @@
 					align-items: center;
 					gap: 20px;
 					flex-wrap: wrap;
+					h2 {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.BestForm {
+		.content {
+			.contentText {
+				h1 {
+					font-size: 34px;
+				}
+				img {
+					width: 100%;
+					height: 192px;
+					object-fit: cover;
+				}
+			}
+			.contentBlock {
+				gap: 30px;
+				.block {
+					width: 100%;
+					height: 220px;
+					display: flex;
+					align-items: center;
+					gap: 20px;
+					transition: 0.4s ease-in-out;
 				}
 			}
 		}
