@@ -1,32 +1,75 @@
 .VideoModals {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(110, 110, 110, 0.3);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  padding: 20px;
-  .modalsContainer {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    background-color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
-    .closeButton {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      background: none;
-      border: none;
-      font-size: 24px;
-      cursor: pointer;
-      color: #333;
-    }
-  }
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+.modalsContainer {
+	position: relative;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.closeButton {
+	position: absolute;
+	top: -10px;
+	right: 0px;
+	font-size: 34px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #333;
+}
+
+.videoThumbnail {
+	width: 100%;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+.playButton {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font-size: 24px;
+	background: rgba(0, 0, 0, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.videoWrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.videoItem {
+	width: 570px;
+	height: 340px;
+	position: relative;
+	cursor: pointer;
+}
+@media (max-width: 768px) {
+	.modalsContainer {
+		max-width: 100%;
+		max-height: 80%;
+	}
+}
+
+@media (max-width: 480px) {
+	.closeButton {
+		font-size: 28px;
+	}
 }
