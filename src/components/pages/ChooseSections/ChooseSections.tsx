@@ -1,4 +1,3 @@
-// src/components/ChooseSections/ChooseSections.js
 "use client";
 import Image from "next/image";
 import scss from "./ChooseSections.module.scss";
