@@ -87,7 +87,7 @@ export default function BurgerMenu() {
 						>
 							{t('study_abroad')}
 						</Link>
-						<Link onClick={() => setIsOpen(false)} href='#contact'>
+						<Link onClick={() => setIsOpen(false)} href='#contacts'>
 							{t('contacts')}
 						</Link>
 					</nav>
