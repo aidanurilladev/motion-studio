@@ -16,20 +16,37 @@
 				height: 50px;
 			}
 		}
-		.nav {
-			display: flex;
-			align-items: center;
-			gap: 25px;
-			a {
-				color: #333;
-				text-decoration: none;
-				font-weight: 600;
-				font-size: 16px;
-				transition: color 0.3s ease;
-				padding: 8px 12px;
-				border-radius: 5px;
+		.nav a {
+			color: #333;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 16px;
+			position: relative;
+			transition: color 0.3s ease;
+			padding: 8px 12px;
+			border-radius: 5px;
+		
+			&:hover {
+				color: #0070f3;
 			}
 		}
+		
+		.nav a.active {
+			color: #0070f3;
+		}
+		
+		.nav a.active::after {
+			content: '';
+			position: absolute;
+			bottom: -3px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 6px;
+			height: 6px;
+			background-color: red;
+			border-radius: 50%;
+		}
+		
 		.headerInput {
 			display: flex;
 			align-items: center;
