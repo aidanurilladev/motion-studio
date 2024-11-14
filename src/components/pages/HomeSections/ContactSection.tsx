@@ -9,7 +9,7 @@ import Link from "next/link";
 import scss from "./ContactSection.module.scss";
 const ContactSection = () => {
   return (
-    <section id="/#contacts" className={scss.ContactSection}>
+    <section id="/contacts" className={scss.ContactSection}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.block}>
