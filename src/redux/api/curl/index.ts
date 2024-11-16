@@ -2,29 +2,21 @@ import { api as index } from "..";
 
 const api = index.injectEndpoints({
   endpoints: (build) => ({
-    getMe: build.query<CURL.GetResponse, CURL.GetRequest>({
+    getCoutries: build.query<CURL.GetCountriesRes, CURL.GetCoutriesReg>({
       query: () => ({
-        url: "/",
+        url: "/studyabroad/",
         method: "GET",
       }),
       providesTags: ["curl"],
     }),
-    postLogin: build.mutation<CURL.PostLoginResponse, CURL.PostLoginRequest>({
-      query: (data) => ({
-        url: "/",
-        method: "POST",
-        body: data,
-      }),
-      invalidatesTags: ["curl"],
-    }),
 
-    getCoutries: build.query<CURL.GetCountriesRes, CURL.GetCoutriesReg>({
+    getUniversities: build.query({
       query: () => ({
-        url: "/country/",
+        url: "/university/",
         method: "GET",
       }),
       providesTags: ["curl"],
     }),
   }),
 });
-export const { useGetMeQuery, usePostLoginMutation, useGetCoutriesQuery } = api;
+export const { useGetCoutriesQuery, useGetUniversitiesQuery } = api;
