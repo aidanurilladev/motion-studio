@@ -8,41 +8,48 @@ import instagram from '@/assets/img/Instagram.svg'
 import { useTranslation } from 'next-i18next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import styles from './BurgerMenu.module.scss'
 
 export default function BurgerMenu() {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	const { t, i18n } = useTranslation()
-	const router = useRouter()
+	// const router = useRouter()
 
 	const handleLanguage = (lang: string) => {
 		i18n?.changeLanguage(lang)
 	}
 
 	const pathname = usePathname()
+
+	const handleScrollToSection = (id: string) => {
+		const section = document.getElementById(id)
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' })
+		}
+	}
+
 	useEffect(() => {
 		const handleClickOutside = (event: MouseEvent) => {
-			const target = event.target as HTMLElement; 
+			const target = event.target as HTMLElement
 			if (isOpen && !target.closest(`.${styles.aa}`)) {
-				setIsOpen(false);
+				setIsOpen(false)
 			}
-		};
-	
-		if (isOpen) {
-			document.body.style.overflow = 'hidden';
-		} else {
-			document.body.style.overflow = 'auto';
 		}
-	
-		document.addEventListener('click', handleClickOutside);
-	
+
+		if (isOpen) {
+			document.body.style.overflow = 'hidden'
+		} else {
+			document.body.style.overflow = 'auto'
+		}
+
+		document.addEventListener('click', handleClickOutside)
+
 		return () => {
-			document.removeEventListener('click', handleClickOutside);
-		};
-	}, [isOpen]);
-	
+			document.removeEventListener('click', handleClickOutside)
+		}
+	}, [isOpen])
 
 	return (
 		<div className={styles.burgerMenu}>
@@ -69,10 +76,7 @@ export default function BurgerMenu() {
 			{isOpen && (
 				<div className={styles.menuOverlay}>
 					<nav className={styles.menuNav}>
-						<Link
-							className={pathname === '/' ? styles.active : ''}
-							href='/'
-						>
+						<Link className={pathname === '/' ? styles.active : ''} href='/'>
 							{t('home')}
 						</Link>
 						<Link
@@ -87,9 +91,16 @@ export default function BurgerMenu() {
 						>
 							{t('study_abroad')}
 						</Link>
-						<Link onClick={() => setIsOpen(false)} href='#contacts'>
-							{t('contacts')}
-						</Link>
+						{pathname === '/' ? (
+							<a
+								onClick={() => handleScrollToSection('contacts')}
+								style={{ cursor: 'pointer' }}
+							>
+								{t('contacts')}
+							</a>
+						) : (
+							<Link href='/'>{t('contacts')}</Link>
+						)}
 					</nav>
 					<div className={styles.languageChange}>
 						<span
