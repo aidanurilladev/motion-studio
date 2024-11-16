@@ -1,35 +1,31 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 namespace CURL {
-  type GetResponse = {
-    profile: User;
-  };
-  type GetRequest = void;
-
-  type PostLoginResponse = {
-    accessToken: string;
-    accessTokenExpiration: number;
-    refreshToken: string;
-  };
-
-  type PostLoginRequest = {
-    email: string;
-    password: string;
-  };
-
   type GetCountriesRes = {
     id: number;
-    higher: string;
-    higher_ru?: string | null;
-    higher_en?: string | null;
-    specializations: string;
-    specializations_ru?: string | null;
-    specializations_en?: string | null;
-    countrys: string;
-    countrys_ru?: string | null;
-    countrys_en?: string | null;
-    image?: string | null;
-    studyabroad: number;
-  };
+    description: string;
+    description_ru?: string | null;
+    description_en?: string | null;
+    image: string;
+  }[];
 
   type GetCoutriesReg = void;
+
+  type getUniversitiesRes = {
+    id: number;
+    location: string;
+    time: string;
+    typeofprogramis: string;
+    language: string;
+    name: string;
+    name_ru: string;
+    name_en: string;
+    image: string | null;
+    description: string;
+    date: string;
+    cost: string;
+    photo: string | null;
+    category: number;
+  };
+
+  type getUniversitiesReq = void;
 }

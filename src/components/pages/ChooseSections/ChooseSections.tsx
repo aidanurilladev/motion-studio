@@ -9,8 +9,8 @@ import { useTranslation } from "react-i18next";
 
 const ChooseSections = () => {
   const { t } = useTranslation();
-  const { data } = useGetCoutriesQuery();
-  console.log("🚀 ~ ChooseSections ~ data:", data);
+  // const { data } = useGetCoutriesQuery();
+  // console.log("🚀 ~ ChooseSections ~ data:", data);
 
   const countries = [
     { id: 1, name: "America", flag: "🇺🇸" },
@@ -31,7 +31,7 @@ const ChooseSections = () => {
     <section className={scss.ChooseSections}>
       <div className="container">
         <div className={scss.content}>
-          <h1>{t("chooseCountry")}</h1> 
+          <h1>{t("chooseCountry")}</h1>
           <Selection />
 
           <div className={scss.cards}>
@@ -46,7 +46,7 @@ const ChooseSections = () => {
                   />
                 </Link>
                 <h4>{country.name}</h4>
-                <h3>{t("higherEducationUK")}</h3> 
+                <h3>{t("higherEducationUK")}</h3>
               </div>
             ))}
           </div>
