@@ -1,7 +1,6 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 import scss from './ContactSection.module.scss'
 
 import email from '@/assets/img/contactEmail.svg'
@@ -12,10 +11,18 @@ import telegram from '@/assets/img/TelegramLogo.png'
 import whatsapp from '@/assets/img/Whatsapp.png'
 
 const ContactSection = () => {
-	const [openModal, setOpenModal] = useState(false)
+	const directMapLink =
+		'https://www.google.com/maps?q=42.8899468014613,74.610874575615&hl=ru'
 
-	const toggleModal = () => {
-		setOpenModal(!openModal)
+	const copyMapLink = () => {
+		navigator.clipboard
+			.writeText(directMapLink)
+			.then(() => {
+				alert('Direct map link copied to clipboard!')
+			})
+			.catch(err => {
+				console.error('Failed to copy the link: ', err)
+			})
 	}
 
 	return (
@@ -64,7 +71,7 @@ const ContactSection = () => {
 							</div>
 							<div className={scss.map}>
 								<iframe
-									src='https://www.google.com/maps/embed?...'
+									src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.1895779111883!2d74.610874575615!3d42.8899468014613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7ed7cb24803%3A0xe1c77d12212757b7!2zMTM4INGD0LsuINCa0YPRgNC10L3QutC10LXQstCwLCDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1729327960851!5m2!1sru!2skg'
 									width='430'
 									height='250'
 									style={{ border: 0 }}
@@ -74,24 +81,10 @@ const ContactSection = () => {
 								/>
 							</div>
 						</div>
-						<button className={scss.ShareLinks} onClick={toggleModal}>
+						<button className={scss.ShareLinks} onClick={copyMapLink}>
 							<Image src={ShareLinks} alt='share link' />
 						</button>
 					</div>
-					{openModal && (
-						<div className={`${scss.modalka} ${openModal ? 'open' : ''}`}>
-							<button className='closeButton' onClick={toggleModal}>
-								&times;
-							</button>
-							<h1>Send</h1>
-							<h2>Share this site with your friends</h2>
-							<nav>
-								<Image src={telegram} alt='telegram' />
-								<Image src={whatsapp} alt='whatsapp' />
-								<Image src={instagram} alt='instagram' />
-							</nav>
-						</div>
-					)}
 				</div>
 			</div>
 		</section>
