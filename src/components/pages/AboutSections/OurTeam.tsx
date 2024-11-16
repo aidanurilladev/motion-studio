@@ -10,6 +10,7 @@ import Person6 from "@/assets/img/Person6.svg";
 
 const OurTeam = () => {
   const { t } = useTranslation();
+  
 
   return (
     <section className={scss.OurTeam}>
