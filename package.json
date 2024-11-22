@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
+    "axios": "^1.7.7",
     "i18next": "^23.16.5",
     "i18next-http-backend": "^2.6.2",
     "next": "15.0.1",

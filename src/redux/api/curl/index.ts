@@ -2,7 +2,7 @@ import { api as index } from "..";
 
 const api = index.injectEndpoints({
   endpoints: (build) => ({
-    getMe: build.query<CURL.GetResponse, CURL.GetRequest>({
+    getCoutries: build.query<CURL.GetCountriesRes, CURL.GetCoutriesReg>({
       query: () => ({
         url: "/studyabroad/",
         method: "GET",
@@ -11,4 +11,4 @@ const api = index.injectEndpoints({
     }),
   }),
 });
-export const { useGetMeQuery } = api;
+export const { useGetCoutriesQuery } = api;

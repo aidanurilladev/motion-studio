@@ -1,13 +1,12 @@
 @font-face {
-	font-family: "Gilroy";
+	font-family: 'Gilroy';
 	src: url('./fonts/Gilroy-Light.woff');
 	font-weight: 500;
 }
 @font-face {
-	font-family: "Montserrat";
+	font-family: 'Montserrat';
 	src: url('./fonts/Montserrat-VariableFont_wght.ttf');
 }
-
 
 * {
 	box-sizing: border-box;
@@ -26,10 +25,11 @@ a {
 
 body {
 	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
 }
 
 .title {
-	font-family: "Gilroy";
+	font-family: 'Gilroy';
 	font-size: clamp(28px, 5vw, 92px);
 	color: #212121;
 	font-weight: 500;
