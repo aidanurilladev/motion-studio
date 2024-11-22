@@ -1,26 +1,27 @@
 .OurTeam {
-	margin: 150px 0px;
-	.content {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
+  margin: 100px 0px;
+  .content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-		@media (max-width: 450px) {
-			align-items: center;
-			justify-content: center;
-		}
+    @media (max-width: 450px) {
+      display: flex;
+      align-items: start;
+      justify-content: start;
+    }
 
-		.team {
-			width: 100%;
-			display: grid;
-			grid-template-columns: 23% 23% 23%;
-			align-content: center;
-			align-items: center;
-			justify-content: space-between;
-			gap: 10%;
-			margin-top: 150px;
+    .team {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 23% 23% 23%;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10%;
+      margin-top: 150px;
 
 			@media (max-width: 450px) {
 				grid-template-columns: 100%;
@@ -43,24 +44,24 @@
 				margin: 0 auto;
 
 
-				&:hover {
-					transform: scale(110%);
-				}
+        &:hover {
+          transform: scale(110%);
+        }
 
-				h2 {
-					margin-top: 28px;
-					font-family: 'Gilroy';
-					font-size: 20px;
-					font-weight: 500;
-				}
+        h2 {
+          margin-top: 28px;
+          font-family: "Gilroy";
+          font-size: 20px;
+          font-weight: 500;
+        }
 
-				p {
-					text-align: center;
-					font-size: 18px;
-					font-weight: 500;
-					color: #7b6aff80;
-				}
-			}
-		}
-	}
+        p {
+          text-align: center;
+          font-size: 18px;
+          font-weight: 500;
+          color: #7b6aff80;
+        }
+      }
+    }
+  }
 }
