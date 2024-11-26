@@ -7,10 +7,12 @@ import univer from "@/assets/img/UniversityImage.png";
 import DescriptionSections from "@/components/pages/UniversitySections/DescriptionSections";
 import CostSections from "./CostSections";
 import PhotoSections from "./PhotoSections";
+import { useGetCoutriesQuery } from "@/redux/api/curl";
 
 const UniversitySections = () => {
   const [activeSection, setActiveSection] = useState<string>("Description");
   const { t } = useTranslation();
+  const { data } = useGetCoutriesQuery();
 
   const specialities = t("specialities", { returnObjects: true }) as string[];
 
