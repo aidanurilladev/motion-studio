@@ -4,7 +4,7 @@ const api = index.injectEndpoints({
   endpoints: (build) => ({
     getCoutries: build.query<CURL.GetCountriesRes, CURL.GetCoutriesReg>({
       query: () => ({
-        url: "/studyabroad/",
+        url: "",
         method: "GET",
       }),
       providesTags: ["curl"],

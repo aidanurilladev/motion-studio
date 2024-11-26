@@ -1,30 +1,30 @@
 namespace CURL {
   type GetCountriesRes = {
-    id?: number;
-    description: string;
-    description_ru?: string;
-    description_en?: string;
-    image: string;
-  };
+    id: number;
+    name: { en: string; ru: string; ky: string; png: string };
+    country: { en: string; ru: string; ky: string; flag: string };
+    location: { en: string; ru: string; ky: string };
+    established: number;
+    specialization: { en: string; ru: string; ky: string }[];
+    type: { en: string; ru: string; ky: string };
+    language: { en: string; ru: string; ky: string };
+    descr: {
+      NominalDuration: { en: string; ru: string; ky: string };
+      Awards: { en: string; ru: string; ky: string };
+      TuitionFee: { en: string; ru: string; ky: string };
+      ApplicationFee: { en: string; ru: string; ky: string };
+      RegistrationFee: { en: string; ru: string; ky: string };
+      EntryQualication: { en: string; ru: string; ky: string };
+      Pre_deadline: { en: string; ru: string; ky: string };
+      Application_deadline: { en: string; ru: string; ky: string };
+    };
+    cost: {
+      title: { en: string; ru: string; ky: string };
+      value_1: { en: string; ru: string; ky: string };
+      value_2: { en: string; ru: string; ky: string };
+    };
+    photo: string[];
+  }[];
 
   type GetCoutriesReg = void;
-
-  type getUniversitiesRes = {
-    id: number;
-    location: string;
-    time: string;
-    typeofprogramis: string;
-    language: string;
-    name: string;
-    name_ru: string;
-    name_en: string;
-    image: string | null;
-    description: string;
-    date: string;
-    cost: string;
-    photo: string | null;
-    category: number;
-  };
-
-  type getUniversitiesReq = void;
 }
